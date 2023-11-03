@@ -1,8 +1,6 @@
 import { memo, ReactNode, useState } from 'react';
 import Link from 'next/link';
-// import { NavLink } from 'react-router-dom';
-import './Header.scss';
-import logo from '../../assets/logo.png';
+import './header.scss';
 
 interface HeaderProps {
   menuTogglerFunction: React.Dispatch<React.SetStateAction<boolean>>;
