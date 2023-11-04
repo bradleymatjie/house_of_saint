@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-// import right from '../assets/right.svg'
+import pointer from '../assets/cursor-fill.svg';
 import saint from '../assets/stones.jpg';
 import Header from './components/Header/Header';
 import { MobileMenu } from './components/MobileMenu/MobileMenu';
@@ -33,31 +33,36 @@ export default function Home() {
           </div>
           <div className="blog-container">
             <div className="card">
-              <Image src={saint} alt="cover" />
+              <Image src={saint} className='cover' alt="cover" />
+              <Image src={pointer} id='pointer' alt='pointer' />
               <p>Bradley Matjie</p>
               <h4>THE HEART PART 4</h4>
             </div>
 
             <div className="card">
-              <Image src={saint} alt="cover" />
+              <Image src={saint} className='cover' alt="cover" />
+              <Image src={pointer} id='pointer' alt='pointer' />
               <p>Bradley Matjie</p>
               <h4>THE HEART PART 4</h4>
             </div>
 
             <div className="card">
-              <Image src={saint} alt="cover" />
+              <Image src={saint} className='cover' alt="cover" />
+              <Image src={pointer} id='pointer' alt='pointer' />
               <p>Bradley Matjie</p>
               <h4>THE HEART PART 4</h4>
             </div>
 
             <div className="card">
-              <Image src={saint} alt="cover" />
+              <Image src={saint} className='cover' alt="cover" />
+              <Image src={pointer} id='pointer' alt='pointer' />
               <p>Bradley Matjie</p>
               <h4>THE HEART PART 4</h4>
             </div>
 
             <div className="card">
-              <Image src={saint} alt="cover" />
+              <Image src={saint} className='cover' alt="cover" />
+              <Image src={pointer} id='pointer' alt='pointer' />
               <p>Bradley Matjie</p>
               <h4>THE HEART PART 4</h4>
             </div>
