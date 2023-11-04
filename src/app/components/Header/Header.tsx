@@ -11,7 +11,7 @@ function Header({ menuTogglerFunction, menuTogglerValue }: HeaderProps) {
   return (
     <header className='header'>
       <div>
-        <h2>Perspective Pulse</h2>
+        <h2 className='logo'>Pluto</h2>
       </div>
 
       <nav>
