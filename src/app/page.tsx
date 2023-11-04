@@ -2,16 +2,14 @@
 import Image from 'next/image';
 // import right from '../assets/right.svg'
 import saint from '../assets/stones.jpg';
-import { Header } from './components/Header/Header';
+import Header from './components/Header/Header';
 import { MobileMenu } from './components/MobileMenu/MobileMenu';
 import { useState } from 'react';
-import { data } from './Data';
 import bg from '../assets/bg.jpg'
 import Link from 'next/link';
 
 export default function Home() {
   const [menuToggler, setMenuToggler] = useState(false);
-  const recentItem = data.find(item => item.id === 1);
   
   return (
     <main>

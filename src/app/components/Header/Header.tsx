@@ -7,7 +7,7 @@ interface HeaderProps {
   menuTogglerValue: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = memo(({ menuTogglerFunction, menuTogglerValue }) => {
+function Header({ menuTogglerFunction, menuTogglerValue }: HeaderProps) {
   return (
     <header className='header'>
       <div>
@@ -41,5 +41,6 @@ export const Header: React.FC<HeaderProps> = memo(({ menuTogglerFunction, menuTo
         <span></span>
       </div>
     </header>
-  );
-});
+)};
+
+export default Header;
