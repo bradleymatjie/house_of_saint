@@ -78,8 +78,10 @@
         }
 
         & .blog-container {
-            height: 150px;
+            height: 200px;
             display: flex;
+            border-top: 1px solid #DAD9D8;
+            border-bottom: 1px solid #DAD9D8;
             gap: 20px;
             overflow: scroll;
 
