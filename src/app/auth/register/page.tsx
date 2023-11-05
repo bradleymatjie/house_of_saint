@@ -31,11 +31,16 @@ export default function Register() {
         console.log("Email:", email);
         console.log("Password:", password);
     }
+
+    
+    function goHome() {
+        window.location.href = '/'
+      }
   
   return (
     <>
     <div className='goBack'
-    onClick={() => window.location.href = '/'}
+    onClick={goHome}
     style={
         {margin: '50px 20px', 
         display: 'flex', 
