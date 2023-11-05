@@ -34,7 +34,8 @@ export default function Register() {
   
   return (
     <>
-    <div className='goBack' 
+    <div className='goBack'
+    onClick={() => window.location.href = '/'}
     style={
         {margin: '50px 20px', 
         display: 'flex', 
