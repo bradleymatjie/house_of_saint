@@ -50,7 +50,7 @@ export default function Login() {
           </form>
           
           <div className="signUp-login">
-            <h2>Don't have an Account?</h2>
+          <h2>Don&apos;t have an Account?</h2>
             <Link href='/auth/register'>
               Sign Up
             </Link>
