@@ -1,0 +1,17 @@
+.footer {
+    position: absolute;
+    bottom: 5px;
+    width: 80%;
+    border-radius: 20px;
+    height: 60px;
+    box-shadow: 1px 1px 3px 1px #282623;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+    & div.selected {
+        background-color: #282623;
+        color: #DAD9D8;
+    }
+}
