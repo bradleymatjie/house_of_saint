@@ -35,8 +35,9 @@ export default function Register() {
   return (
     <>
     <div className='goBack' style={{margin: '50px 20px', display: 'flex', justifyContent: 'flex-end'}}>
-        <i className="bi bi-chevron-left"></i>back
+    <i className="bi bi-chevron-left"></i>back
     </div>
+
     <section className="signup">
       <div className='signup_container'>
         <form onSubmit={handleSubmit} method='POST'>

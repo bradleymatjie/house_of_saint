@@ -27,6 +27,7 @@ export default function Login() {
         <div className='goBack' style={{margin: '50px 20px', display: 'flex', justifyContent: 'flex-end'}}>
             <i className="bi bi-chevron-left"></i>back
         </div>
+
         <section className="login">
         <div className='login_container'>
           <form method='POST' onSubmit={handleSubmit}>
