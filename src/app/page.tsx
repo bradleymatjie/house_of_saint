@@ -7,6 +7,7 @@ import { MobileMenu } from './components/MobileMenu/MobileMenu';
 import { useState } from 'react';
 import './homepage.scss';
 import bg from '../assets/bg.jpg';
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import Link from 'next/link';
 import Navbar from './components/Navbar/Navbar';
@@ -14,6 +15,10 @@ import Navbar from './components/Navbar/Navbar';
 export default function Home() {
   const [menuToggler, setMenuToggler] = useState(false);
   
+  function getstarted() {
+    window.location.href = '/auth/register';
+  }
+
   return (
     <main>
       <Header 
@@ -27,7 +32,7 @@ export default function Home() {
           <input type="text" placeholder='search by Author or title' />
           <h1>Face The new Experience</h1>
           <p>Beyond the Keyboard: Crafting Connections, One Blog at a Time.</p>
-          <button>Get Started</button>   
+          <button onClick={getstarted}>Get Started</button>   
         </div>
         <div className="bottom">
           <div>

@@ -1,0 +1,106 @@
+.signup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_container {
+        padding: 0 10px;
+        max-width: 400px;
+
+        & form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            & h1 {
+                font-size: 24px;
+                width: 40%;
+                border-bottom: 4px double #252525;
+            }
+
+            & input {
+                height: 40px;
+                padding-left: 5px;
+                border: none;
+                border-bottom: 1px solid #252525;
+                background-color: transparent;
+            }
+
+            & button {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+.signUp-login {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    & h2 {
+        font-size: 16px;
+    }
+}
+
+.login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+
+    &_container {
+        max-width: 300px;
+    }
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        & h1 {
+            font-size: 24px;
+            width: 30%;
+            border-bottom: 4px double #252525;
+        }
+
+        & input {
+            height: 40px;
+            padding-left: 5px;
+            border: none;
+            border-bottom: 1px solid #252525;
+            background-color: transparent;
+        }
+    }
+}
+
+.submitbutton {
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #252525;
+    color: #dad9da;
+    border: none;
+    margin: 10px auto;
+}
+
+.goback {
+    border: 1px solid red;
+    top: 10px;
+    right: 10px;
+}
