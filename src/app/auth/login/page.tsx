@@ -4,10 +4,9 @@ import '../auth.scss';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import Link from 'next/link';
 
-function login() {
+export default function login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
 
     function handleEmail(event: ChangeEvent<HTMLInputElement>): void {
         setEmail(event.target.value);
@@ -30,7 +29,7 @@ function login() {
         </div>
         <section className="login">
         <div className='login_container'>
-          <form action='' method='POST' onSubmit={handleSubmit}>
+          <form method='POST' onSubmit={handleSubmit}>
           <h1>Log in</h1>
             <input
               type="email"
@@ -60,5 +59,3 @@ function login() {
       </>
     )
 }
-
-export default login;
