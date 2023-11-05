@@ -4,7 +4,7 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import '../auth.scss';
 import Link from 'next/link';
 
-export default function register() {
+export default function Register() {
   const [firstname, setFirstname] = useState('');
   const [lastname, setlastname] = useState('');
   const [email, setEmail] = useState('');
@@ -15,10 +15,9 @@ export default function register() {
   }
   
   function handlelastName(event: ChangeEvent<HTMLInputElement>): void {
-    setFirstname(event.target.value);
+    setlastname(event.target.value);
   }
     
-  
   function handleEmail(event: ChangeEvent<HTMLInputElement>): void {
     setEmail(event.target.value);
     }
@@ -31,7 +30,7 @@ export default function register() {
         event.preventDefault();
         console.log("Email:", email);
         console.log("Password:", password);
-      }
+    }
   
   return (
     <>
