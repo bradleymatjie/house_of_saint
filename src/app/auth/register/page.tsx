@@ -62,7 +62,7 @@ export default function Register() {
             required/>
             <input
             type="text"
-            placeholder='First Name'
+            placeholder='Last Name'
             name='firstname'
             onChange={handlelastName}
             value={lastname}
