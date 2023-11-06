@@ -38,18 +38,15 @@ export default function Register() {
       }
   
   return (
-    <>
-    <div className='goBack'
-    onClick={goHome}
-    style={
-        {margin: '50px 20px', 
-        display: 'flex', 
-        justifyContent: 'flex-end'
-        }}>
-    <i className="bi bi-chevron-left"></i>back
-    </div>
-
     <section className="signup">
+    <Link href='/'>
+        <div 
+            className='goBack'
+            style={{position: 'absolute', right: '30px',top: '50px', display: 'flex', justifyContent: 'flex-end', zIndex: '10'}}>
+            
+            <i className="bi bi-chevron-left"></i>back
+        </div>
+          </Link>
       <div className='signup_container'>
         <form onSubmit={handleSubmit} method='POST'>
         <h1>Sign up</h1>
@@ -93,6 +90,5 @@ export default function Register() {
       </div>
 
     </section>
-    </>
   );
 }

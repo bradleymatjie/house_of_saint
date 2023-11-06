@@ -27,15 +27,15 @@ export default function Login() {
       }
 
     return (
-        <>
+        <section className="login">
+        <Link href='/'>
         <div 
             className='goBack'
-            onClick={goHome} 
-            style={{margin: '50px 20px', display: 'flex', justifyContent: 'flex-end'}}>
+            style={{position: 'absolute', right: '30px',top: '50px', display: 'flex', justifyContent: 'flex-end', zIndex: '10'}}>
+            
             <i className="bi bi-chevron-left"></i>back
         </div>
-
-        <section className="login">
+          </Link>
         <div className='login_container'>
           <form method='POST' onSubmit={handleSubmit}>
           <h1>Log in</h1>
@@ -64,6 +64,5 @@ export default function Login() {
           </div>
         </div>
       </section>
-      </>
     )
 }
