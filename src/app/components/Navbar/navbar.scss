@@ -1,15 +1,18 @@
 .footer {
     position: fixed;
-    bottom: 30px;
+    bottom: -20px;    
     width: 80%;
     max-width: 490px;
     border-radius: 20px;
     height: 60px;
     box-shadow: 1px 1px 3px 1px #282623;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     & div.selected {
         background-color: #282623;

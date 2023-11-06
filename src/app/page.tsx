@@ -37,7 +37,7 @@ export default function Home() {
         <div className="bottom">
           <div>
             <h2>New Release</h2>
-            <Link href='/'>See all</Link>
+            <Link href='/posts'>See all</Link>
           </div>
           <div className="blog-container">
             <div className="card">
