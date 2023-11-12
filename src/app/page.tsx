@@ -4,7 +4,7 @@ import pointer from '../assets/cursor-fill.svg';
 import saint from '../assets/stones.jpg';
 import Header from './components/Header/Header';
 import { MobileMenu } from './components/MobileMenu/MobileMenu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './homepage.scss';
 import bg from '../assets/bg.jpg';
 import 'bootstrap-icons/font/bootstrap-icons.css'
@@ -19,6 +19,20 @@ export default function Home() {
     window.location.href = '/auth/register';
   }
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/');
+        const result = await response.json();
+        console.log(result.text);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    fetchData();
+  }, [])
+
   return (
     <main>
       <Header 
@@ -26,57 +40,79 @@ export default function Home() {
         menuTogglerValue={menuToggler} 
       />
       <MobileMenu menuToggler={menuToggler} />
-      <section className="home">
+      <section className='landing'>
         <div className="top">
-          <Image src={bg} priority={true} alt='bg image' style={{position: 'absolute', left: '0', right: '0', bottom: '0', top: '0'}} />
-          <input type="text" placeholder='search by Author or title' />
-          <h1>Face The new Experience</h1>
-          <p>Beyond the Keyboard: Crafting Connections, One Blog at a Time.</p>
-          <button onClick={getstarted}>Get Started</button>   
+          <h1>The New Experience</h1>
+          <p>Beyond The Keyboard. Crafting Connections, One Blog at a Time.</p>
+          <button>
+            Get Started
+          </button>
         </div>
-        <div className="bottom">
-          <div>
-            <h2>New Release</h2>
-            <Link href='/posts'>See all</Link>
-          </div>
-          <div className="blog-container">
+        <div className='content'>
+          <h2>Recent</h2>
+          <div className="container">
             <div className="card">
-              <Image src={saint} className='cover' alt="cover" />
-              <Image src={pointer} id='pointer' alt='pointer' />
-              <p>Bradley Matjie</p>
-              <h4>THE HEART PART 4</h4>
+              <Image src={saint} alt="cover" width={70} height={70} loading='lazy' />
+              <div>
+                <p>NOV 11,1 2023</p>
+                <h3>The Universe And My Self In It</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur 
+                  adipisicing elit...
+                </p>
+                <p>By: Bradley Matjie</p>
+              </div>
             </div>
-
             <div className="card">
-              <Image src={saint} className='cover' alt="cover" />
-              <Image src={pointer} id='pointer' alt='pointer' />
-              <p>Bradley Matjie</p>
-              <h4>THE HEART PART 4</h4>
+              <Image src={saint} alt="cover" width={70} height={70} loading='lazy' />
+              <div>
+                <p>NOV 11,1 2023</p>
+                <h3>The Universe And My Self In It</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur 
+                  adipisicing elit...
+                </p>
+                <p>By: Bradley Matjie</p>
+              </div>
             </div>
-
             <div className="card">
-              <Image src={saint} className='cover' alt="cover" />
-              <Image src={pointer} id='pointer' alt='pointer' />
-              <p>Bradley Matjie</p>
-              <h4>THE HEART PART 4</h4>
+              <Image src={saint} alt="cover" width={70} height={70} loading='lazy' />
+              <div>
+                <p>NOV 11,1 2023</p>
+                <h3>The Universe And My Self In It</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur 
+                  adipisicing elit...
+                </p>
+                <p>By: Bradley Matjie</p>
+              </div>
             </div>
-
             <div className="card">
-              <Image src={saint} className='cover' alt="cover" />
-              <Image src={pointer} id='pointer' alt='pointer' />
-              <p>Bradley Matjie</p>
-              <h4>THE HEART PART 4</h4>
+              <Image src={saint} alt="cover" width={70} height={70} loading='lazy' />
+              <div>
+                <p>NOV 11,1 2023</p>
+                <h3>The Universe And My Self In It</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur 
+                  adipisicing elit...
+                </p>
+                <p>By: Bradley Matjie</p>
+              </div>
             </div>
-
             <div className="card">
-              <Image src={saint} className='cover' alt="cover" />
-              <Image src={pointer} id='pointer' alt='pointer' />
-              <p>Bradley Matjie</p>
-              <h4>THE HEART PART 4</h4>
+              <Image src={saint} alt="cover" width={70} height={70} loading='lazy' />
+              <div>
+                <p>NOV 11,1 2023</p>
+                <h3>The Universe And My Self In It</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur 
+                  adipisicing elit...
+                </p>
+                <p>By: Bradley Matjie</p>
+              </div>
             </div>
           </div>
         </div>
-        <Navbar />
       </section>
     </main>
   )

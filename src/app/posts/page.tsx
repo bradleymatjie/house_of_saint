@@ -12,7 +12,6 @@ import Navbar from '../components/Navbar/Navbar';
 export default function Posts() {
     const [menuToggler, setMenuToggler] = useState(false);
 
-
     return (
         <>
         <Header 
