@@ -11,6 +11,10 @@
     
     & .top {
         // border: 1px solid red;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        right: 10px;
         box-shadow: 1px 1px 5px 1px #222;
         margin: 0 10px;
         border-radius: 20px;
@@ -39,7 +43,7 @@
 
     .content {
         padding: 0 10px;
-        height: 65%;
+        height: 60%;
 
         & > h2 {
             margin-bottom: 0;
