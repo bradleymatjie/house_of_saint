@@ -1,4 +1,3 @@
-import { memo, ReactNode, useState } from 'react';
 import Link from 'next/link';
 import './header.scss';
 
@@ -13,19 +12,14 @@ function Header({ menuTogglerFunction, menuTogglerValue }: HeaderProps) {
       <div>
         <h2 className='logo'>Pluto</h2>
       </div>
-
       <nav>
         <ul className='header-navItems'>
           <li>
-            <Link href='/blog/'>Home</Link>
-          </li>
-
-          <li>
-            <Link href='/blog/posts'>Blog</Link>
+            <Link href='/'>Home</Link>
           </li>
 
           <li id='loginDesktop'>
-            <Link href='/blog/login'>Sign In</Link>
+            <Link href='/auth/login'>Sign In</Link>
           </li>
         </ul>
       </nav>

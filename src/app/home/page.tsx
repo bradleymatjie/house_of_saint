@@ -2,6 +2,6 @@ import './home.scss';
 
 export default function home() {
     return (
-        <div>home</div>
+        <div>hello</div>
     )
 }
