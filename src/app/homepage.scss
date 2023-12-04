@@ -20,6 +20,18 @@
                 margin-top: 5px;
                 font-size: 1.5em;
             }
+
+            & a {
+                font-size: 16px;
+                border: 1px solid #cac6c0;
+                padding: 5px;
+                margin: 5px;
+                display: block;
+                width: fit-content;
+                color: #cac6c0;
+                text-decoration: none;
+                border-radius: 10px;
+            }
         }
 
         & .small-cards-container {
@@ -69,7 +81,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         color: #dedcdc;
-        height: 42vh;
+        height: 38vh;
         
         & div {
             display: flex;
