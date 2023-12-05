@@ -10,10 +10,6 @@ function Header() {
       </div>
       <nav>
         <ul className='header-navItems'>
-          <li>
-            <Link href='/'>Home</Link>
-          </li>
-
           <li id='loginDesktop'>
             <Link href='/auth/login'>Sign In</Link>
           </li>

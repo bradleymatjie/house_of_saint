@@ -98,4 +98,8 @@
     padding-right: 10px;
     transform: scale(2);
     color: #252525;
+    
+    @media (min-width: 1020px) {
+      display: none;
+    }
   }
