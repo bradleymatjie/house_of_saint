@@ -5,6 +5,7 @@ import { useState } from 'react';
 import './homepage.scss';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   
@@ -15,7 +16,11 @@ export default function Home() {
       />
       {/* <MobileMenu menuToggler={menuToggler} /> */}
       <section className='landing'>
-      <div className='landing-left'>
+      <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }} 
+      className='landing-left'>
         <div className='landing-left_first'>
           <h1>FOR EVERYONE BUT<b/> NOTANYONE</h1>
           <p>Harmony in Sound, Vision, and Words: Crafting a Symphony of Creativity.</p>
@@ -38,8 +43,12 @@ export default function Home() {
           </div>
         </div>
         </div>
-      </div>
-      <div className='landing-right' style={{backgroundImage: 'url(https://www.linearity.io/blog/content/images/2022/03/610963083219da6a0a00ccb6_Cover-Dark-2.png)'}}>
+      </motion.div>
+      <motion.div
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1.5 }} 
+      className='landing-right' style={{backgroundImage: 'url(https://www.linearity.io/blog/content/images/2022/03/610963083219da6a0a00ccb6_Cover-Dark-2.png)'}}>
         <div>
           <div className='list-items'>
             <Link href='/about'>About
@@ -50,7 +59,7 @@ export default function Home() {
           <i className="bi bi-arrow-up-right-circle-fill"></i></Link>
           </div>
         </div>
-      </div>
+      </motion.div>
       </section>
     </main>
   )
