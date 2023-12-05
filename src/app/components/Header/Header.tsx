@@ -10,7 +10,7 @@ function Header({ menuTogglerFunction, menuTogglerValue }: HeaderProps) {
   return (
     <header className='header'>
       <div>
-        <h2 className='logo'>Pluto</h2>
+        <h2 className='logo'>HOUSE OF SAINT</h2>
       </div>
       <nav>
         <ul className='header-navItems'>
