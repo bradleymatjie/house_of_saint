@@ -1,12 +1,8 @@
 import Link from 'next/link';
 import './header.scss';
 
-interface HeaderProps {
-  menuTogglerFunction: React.Dispatch<React.SetStateAction<boolean>>;
-  menuTogglerValue: boolean;
-}
 
-function Header({ menuTogglerFunction, menuTogglerValue }: HeaderProps) {
+function Header() {
   return (
     <header className='header'>
       <div>
@@ -24,16 +20,9 @@ function Header({ menuTogglerFunction, menuTogglerValue }: HeaderProps) {
         </ul>
       </nav>
 
-      <div
-        className={`toggle ${menuTogglerValue ? "toggled" : ""}`}
-        onClick={() => {
-          menuTogglerFunction((state: boolean) => !state);
-        }}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <Link href='/auth/login' className='toggle'>
+        <i className="bi bi-person-circle"></i>
+      </Link>
     </header>
 )};
 

@@ -35,7 +35,7 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      padding-right: 50px;
+      padding-right: 10px;
   
       // header-navItems li
       & li {
@@ -74,62 +74,6 @@
     padding-bottom: 3px;
   }
   
-  //  hamburger menu bar
-  .toggle {
-    position: relative;
-    width: 50px;
-    height: 40px;
-    background: transparent;
-    box-shadow: 0 10px 20px rgba(255, 254, 254, 0.08);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-right: 10px;
-  
-    @media (min-width: 1020px) {
-      display: none;
-    }
-  }
-  
-  .toggle span {
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background-color: #252525;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.5s;
-  }
-  
-  .toggle span:nth-child(1) {
-    transform: translateY(-7px);
-    width: 20px;
-    left: 10px;
-  }
-  
-  .toggle span:nth-child(2) {
-    transform: translateY(7px);
-    width: 20px;
-    left: 10px;
-  }
-  
-  .toggle.toggled span:nth-child(3) {
-    transform: translateX(-50px);
-  }
-  
-  .toggle.toggled span:nth-child(1) {
-    width: 30px;
-    transform: rotate(45deg);
-  }
-  
-  .toggle.toggled span:nth-child(2) {
-    width: 30px;
-    transform: rotate(-45deg);
-  }
-  
   #loginDesktop {
         padding: 10px 20px;
         background-color: #252525;
@@ -148,4 +92,10 @@
           border-bottom: none;
           background-color: aliceblue;
         }
+  }
+
+  .toggle {
+    padding-right: 10px;
+    transform: scale(2);
+    color: #252525;
   }
