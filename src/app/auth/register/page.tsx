@@ -1,42 +1,45 @@
-'use client'
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import { ChangeEvent, FormEvent, useState } from 'react';
-import '../auth.scss';
+import { sql } from '@vercel/postgres';
+// import { NextResponse } from 'next/server';
 import Link from 'next/link';
+import '../auth.scss';
 
 export default function Register() {
-  const [firstname, setFirstname] = useState('');
-  const [lastname, setlastname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  function handleFirstName(event: ChangeEvent<HTMLInputElement>): void {
-    setFirstname(event.target.value);
-  }
-  
-  function handlelastName(event: ChangeEvent<HTMLInputElement>): void {
-    setlastname(event.target.value);
-  }
+  const handleSubmit = async (FormData: FormData) => {
+    "use server"
+
+    const firstnameEntry = FormData.get('firstname');
+    const firstname = firstnameEntry !== null ? firstnameEntry.toString() : '';
     
-  function handleEmail(event: ChangeEvent<HTMLInputElement>): void {
-    setEmail(event.target.value);
-    }
-
-    function handlepassword(event: ChangeEvent<HTMLInputElement>): void {
-        setPassword(event.target.value)
-    }
-
-    const handleSubmit = (event: FormEvent): void => {
-        event.preventDefault();
-        console.log("Email:", email);
-        console.log("Password:", password);
-    }
-
+    const lastnameEntry = FormData.get('lastname');
+    const lastname = lastnameEntry !== null ? lastnameEntry.toString() : '';
     
-    function goHome() {
-        window.location.href = '/'
-      }
-  
+    const emailEntry = FormData.get('email');
+    const email = emailEntry !== null ? emailEntry.toString() : '';
+
+    const passwordEntry = FormData.get('firstname');
+    const password = passwordEntry !== null ? passwordEntry.toString() : '';
+
+    try {
+      const result = await sql`
+      INSERT INTO users (firstname, lastname, email, password)
+      VALUES (${firstname}, ${lastname}, ${email}, ${password})
+      ON CONFLICT (email)
+      DO NOTHING
+      RETURNING *;
+    `;
+    
+    if (result.rows && result.rows.length > 0) {
+      console.log('User created:', result.rows[0]);
+    } else {
+      console.log('User already exists');
+    }
+      // window.location.href = '/'
+    } catch (error) {
+      console.error('Error creating user:', error);
+    }
+  };
+
   return (
     <section className="signup">
     <Link href='/'>
@@ -48,35 +51,30 @@ export default function Register() {
         </div>
           </Link>
       <div className='signup_container'>
-        <form onSubmit={handleSubmit} method='POST'>
+        <form action={handleSubmit} method='POST'>
         <h1>Sign up</h1>
           <input
             type="text"
             placeholder='First Name'
             name='firstname'
-            onChange={handleFirstName}
-            value={firstname}
             required/>
+
             <input
             type="text"
             placeholder='Last Name'
-            name='firstname'
-            onChange={handlelastName}
-            value={lastname}
+            name='lastname'
             required/>
+
           <input
             type="email"
             placeholder='Email'
             name='email'
-            onChange={handleEmail}
-            value={email}
             required/>
+
           <input
             type="password"
             placeholder='password'
             name='password'
-            onChange={handlepassword}
-            value={password}
             required/>
           <button type="submit" className='submitbutton'>Register</button>
         </form>
