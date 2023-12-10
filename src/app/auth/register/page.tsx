@@ -1,5 +1,4 @@
 import { sql } from '@vercel/postgres';
-// import { NextResponse } from 'next/server';
 import Link from 'next/link';
 import '../auth.scss';
 
@@ -31,7 +30,6 @@ export default function Register() {
     
     if (result.rows && result.rows.length > 0) {
       console.log('User created:', result.rows[0]);
-      window.location.href = '/'
     } else {
       console.log('User already exists');
     }

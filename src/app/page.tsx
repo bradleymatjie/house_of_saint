@@ -1,7 +1,5 @@
 'use client'
 import Header from './components/Header/Header';
-import { MobileMenu } from './components/MobileMenu/MobileMenu';
-import { useState } from 'react';
 import './homepage.scss';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import Link from 'next/link';
@@ -14,7 +12,6 @@ export default function Home() {
     <main>
       <Header 
       />
-      {/* <MobileMenu menuToggler={menuToggler} /> */}
       <section className='landing'>
       <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -29,7 +26,7 @@ export default function Home() {
         <div className='small-cards-container'>
         <div 
           className='small-cards-container-item' 
-          style={{backgroundImage: 'url(https://scontent-jnb1-1.xx.fbcdn.net/v/t39.30808-6/281114696_2813984552239648_6105235835475739839_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=3635dc&_nc_eui2=AeEn5bLD3eF5ZaQLDyoUO4snfFIDIP26JAN8UgMg_bokA2OZERTxwyeANb3vESv1uia1ioA-E10WFs1hlWs1QyVI&_nc_ohc=txS9dkg2sHwAX-K423y&_nc_ht=scontent-jnb1-1.xx&cb_e2o_trans=t&oh=00_AfA7tEC3urfMjeoF5wAUjgZq5ZDOaKHHeh3wZt-7OdsX8g&oe=65721CD7)'}}
+          style={{backgroundImage: 'url(../assets/saints_gallery.jpg)'}}
         >
           <div>
             <h2 style={{fontSize: '1.5em'}}>Saints Gallery</h2>
